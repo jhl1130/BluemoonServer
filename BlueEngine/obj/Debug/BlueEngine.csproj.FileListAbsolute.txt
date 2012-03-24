@@ -1,0 +1,15 @@
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameNetwork\obj\Debug\ResolveAssemblyReference.cache
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameNetwork\obj\Debug\GameNetwork.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameNetwork\obj\Debug\GameNetwork.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameNetwork\bin\Debug\GameNetwork.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameNetwork\bin\Debug\GameNetwork.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameNetwork\bin\Debug\UnityEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Debug\BlueEngine.XML
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Debug\BlueEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Debug\BlueEngine.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Debug\Mono.Data.SqliteClient.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Debug\mysql.data.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Debug\UnityEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\obj\Debug\ResolveAssemblyReference.cache
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\obj\Debug\BlueEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\obj\Debug\BlueEngine.pdb

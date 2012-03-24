@@ -1,0 +1,9 @@
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\bin\Release\BlueEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\bin\Release\BlueEngine.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\obj\x86\Release\ResolveAssemblyReference.cache
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\bin\Release\BluemoonClient.exe.config
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\bin\Release\BluemoonClient.exe
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\bin\Release\BluemoonClient.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\obj\x86\Release\BluemoonClient.exe
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\obj\x86\Release\BluemoonClient.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BluemoonClient\bin\Release\UnityEngine.dll

@@ -1,0 +1,3 @@
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\bin\Release\GameServer.exe
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\obj\x86\Release\ResolveAssemblyReference.cache
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\obj\x86\Release\GameServer.exe

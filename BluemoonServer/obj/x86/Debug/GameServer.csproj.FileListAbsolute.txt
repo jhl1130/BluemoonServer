@@ -1,0 +1,8 @@
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\obj\x86\Debug\ResolveAssemblyReference.cache
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\bin\Debug\GameServer.exe
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\bin\Debug\GameServer.pdb
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\obj\x86\Debug\GameServer.exe
+f:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\obj\x86\Debug\GameServer.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\bin\Debug\GameNetwork.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\bin\Debug\UnityEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameServer\bin\Debug\GameNetwork.pdb

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3A2F205-D3AE-40B6-812C-EF09B653EAFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlueEngine</RootNamespace>
+    <AssemblyName>BlueEngine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\BlueEngine.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\BlueEngine.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Data.SqliteClient">
+      <HintPath>..\..\..\Unity\Unity3.5.0f5\Data\Mono\lib\mono\2.0\Mono.Data.SqliteClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\Unity\Unity3.5.0f5\Data\Mono\lib\mono\2.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\Unity\Unity3.5.0f5\Data\Mono\lib\mono\2.0\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <HintPath>..\..\..\Unity\Unity3.5.0f5\Data\Mono\lib\mono\2.0\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>..\..\..\Unity\Unity3.5.0f5\Data\Mono\lib\mono\2.0\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Mono\MySQLConnector.net-6.5.4\v2\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Unity\Unity3.5.0f5\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\cConsole.cs" />
+    <Compile Include="Core\cCryptogram.cs" />
+    <Compile Include="Core\cVector3.cs" />
+    <Compile Include="Core\cEntity.cs" />
+    <Compile Include="Core\cDatabase.cs" />
+    <Compile Include="Core\cDataTables.cs" />
+    <Compile Include="Game\cUserAccount.cs" />
+    <Compile Include="Game\cMonster.cs" />
+    <Compile Include="Game\cSkill.cs" />
+    <Compile Include="Game\cStage.cs" />
+    <Compile Include="Game\cUserItem.cs" />
+    <Compile Include="Game\cItemInfo.cs" />
+    <Compile Include="Game\cTrigger.cs" />
+    <Compile Include="Game\cUserAccount2.cs" />
+    <Compile Include="Game\cUserCharacter.cs" />
+    <Compile Include="Game\cDBField.cs" />
+    <Compile Include="Network\cChannel.cs" />
+    <Compile Include="Network\cUnityNetConnector.cs" />
+    <Compile Include="Debug\cLog.cs" />
+    <Compile Include="Core\cObject.cs" />
+    <Compile Include="Core\cBitCount.cs" />
+    <Compile Include="Core\cBitSize.cs" />
+    <Compile Include="Core\cBitStream.cs" />
+    <Compile Include="Core\cTime.cs" />
+    <Compile Include="Network\cClient.cs" />
+    <Compile Include="Network\cNetwork.cs" />
+    <Compile Include="Core\cUnityObject.cs" />
+    <Compile Include="Network\cServer.cs" />
+    <Compile Include="Network\NetAttribute.cs" />
+    <Compile Include="Network\cNetConnector.cs" />
+    <Compile Include="Network\cParty.cs" />
+    <Compile Include="Network\cPolicyClient.cs" />
+    <Compile Include="Network\cMutex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

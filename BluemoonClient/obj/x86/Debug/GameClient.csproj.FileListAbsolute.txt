@@ -1,0 +1,6 @@
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameClient\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameClient\bin\Debug\GameClient.exe
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameClient\bin\Debug\GameClient.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameClient\obj\x86\Debug\GameClient.exe
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameClient\obj\x86\Debug\GameClient.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\GameClient\bin\Debug\GameClient.exe.config

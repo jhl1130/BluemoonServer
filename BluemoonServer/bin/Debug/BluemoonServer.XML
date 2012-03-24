@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BluemoonServer</name>
+    </assembly>
+    <members>
+        <member name="T:BlueEngine.cPolicyServer">
+            <summary>
+            크로스도메인정책 서버
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cPolicyServer.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cPolicyServer.#ctor(System.String,System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="name">이름</param>
+            <param name="short_name">짧은이름</param>
+        </member>
+        <member name="M:BlueEngine.cPolicyServer.DoListen">
+            <summary>
+            리슨 프로세스
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cPolicyServer.OnRecv(BlueEngine.cClient,System.Byte[],System.Int32)">
+            <summary>
+            수신 데이터 파싱
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="data">데이터</param>
+            <param name="size">데이터크기</param>
+        </member>
+        <member name="T:BlueEngine.cGameServer">
+            <summary>
+            게임서버
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.m_db">
+            <summary>
+            데이터 베이스
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.m_thread_db_load">
+            <summary>
+            DB 로드 쓰래드
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.m_thread_db_save">
+            <summary>
+            DB 저장 쓰래드
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.m_requests">
+            <summary>
+            요청 리스트
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cGameServer.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cGameServer.#ctor(System.String,System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="name">이름</param>
+            <param name="short_name">짧은이름</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.Start(System.UInt16)">
+            <summary>
+            서버 시작
+            </summary>
+            <param name="port">리슨 포트</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.AddRequest(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            요청 명령 추가
+            </summary>
+            <param name="client">요청자</param>
+            <param name="order">명령코드</param>
+            <param name="bits">파라메타</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.ReadRequest">
+            <summary>
+            요청 하나 읽기. 읽은건 삭제
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BlueEngine.cGameServer.DoDBLoad">
+            <summary>
+            DB Load 프로세스
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cGameServer.DoDBSave">
+            <summary>
+            DB Save 프로세스
+            </summary>
+        </member>
+        <member name="M:BlueEngine.cGameServer.OnRecv(BlueEngine.cClient,System.Byte[],System.Int32)">
+            <summary>
+            클라이언트로 부터 받은 패킷처리
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="data">수신 데이터</param>
+            <param name="size">수신 데이터 크기</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.OnRecv(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream,System.Boolean)">
+            <summary>
+            클라이언트로 부터 받은 패킷처리
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="data">수신 데이터</param>
+            <param name="size">수신 데이터 크기</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvServerLogin(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 서버 : 로그인
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvServerIn(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 서버 : 입장
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvServerOut(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 서버 : 퇴장
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvClientInfoDefault(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 클라이언트 : 정보 : 기본
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvChannelList(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 채널 : 리스트
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvChannelIn(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 채널 : 입장
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvChannelOut(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 채널 : 퇴장
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvChannelChat(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 채널 : 채팅
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvPartyChat(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 파티 : 채팅.
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageList(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 리스트
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageInRequest(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 입장 : 요청
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserIn(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 입장
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserOut(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 퇴장
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserMove(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 이동
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserAttackMonster(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 공격 : 몬스터
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserSkillSelf(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 스킬 사용 : 자신
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserSkillMonster(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 스킬 사용 : 몬스터
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserSkillPos(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 스킬 사용 : 좌표
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserDemage(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 데미지
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserItemUseSelf(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 아이템 사용 : 자신
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageUserTriggerOn(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 유저 : 트리거 작동
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonIn(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지  : 몬스터 : 입장 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonMove(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지  : 몬스터 : 이동 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonAttackUser(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 몬스터 : 공격 : 유저 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonSkillSelf(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 몬스터 : 스킬 사용 : 자신 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonSkillUser(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 몬스터 : 스킬 사용 : 유저 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonSkillPos(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 몬스터 : 스킬 사용 : 좌표 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageMonDemage(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 몬스터 : 데미지 : (파티장 권한 필요)
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="M:BlueEngine.cGameServer.RecvStageData(BlueEngine.cClient,BlueEngine.cNetwork.eOrder,BlueEngine.cBitStream)">
+            <summary>
+            수신 : 스테이지 : 커스텀 데이터
+            </summary>
+            <param name="client">클라이언트 객체</param>
+            <param name="order">수신 명령코드</param>
+            <param name="bits">수신 데이터</param>
+        </member>
+        <member name="T:BlueEngine.cGameServer.cRequest">
+            <summary>
+            요청 객체
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.cRequest.client">
+            <summary>
+            클라이언트 객체
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.cRequest.order">
+            <summary>
+            요청명령
+            </summary>
+        </member>
+        <member name="F:BlueEngine.cGameServer.cRequest.bits">
+            <summary>
+            파라메타
+            </summary>
+        </member>
+    </members>
+</doc>

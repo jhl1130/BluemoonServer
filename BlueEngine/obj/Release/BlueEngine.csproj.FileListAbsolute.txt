@@ -1,0 +1,6 @@
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\obj\Release\ResolveAssemblyReference.cache
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Release\BlueEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Release\BlueEngine.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\obj\Release\BlueEngine.dll
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\obj\Release\BlueEngine.pdb
+F:\work\Bluelab\bluemoon\latest\program\server\GameServer\BlueEngine\bin\Release\UnityEngine.dll
